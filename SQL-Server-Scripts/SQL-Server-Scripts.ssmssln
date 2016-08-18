@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 13.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Swiss Army Knife", "Swiss Army Knife\Swiss Army Knife.ssmssqlproj", "{331529BA-A985-4B32-860E-615EA671C185}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Unsorted", "Unsorted\Unsorted.ssmssqlproj", "{908F71BC-1EDF-475D-A410-E7458E7B8820}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAFDD203-E0DC-4540-8448-6051AAD27CF2}.Default|Default.ActiveCfg = Default
+		{331529BA-A985-4B32-860E-615EA671C185}.Default|Default.ActiveCfg = Default
+		{908F71BC-1EDF-475D-A410-E7458E7B8820}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
