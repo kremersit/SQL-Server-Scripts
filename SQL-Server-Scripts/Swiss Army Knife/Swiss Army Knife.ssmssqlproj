@@ -2,103 +2,116 @@
 <SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Swiss Army Knife">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
-      <Items />
+      <Items>
+        <ConnectionNode Name="N0RIPSNI:N0RIPSNI\Administrator">
+          <Created>2016-08-18T15:23:44.4968051+02:00</Created>
+          <Type>SQL</Type>
+          <Server>N0RIPSNI</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="Querying the plan cache for index scans.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for index scans.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for index usage.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for index usage.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for Lookups.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for Lookups.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for missing indexes.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for missing indexes.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for parameterization.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for parameterization.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for plans that have warnings.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for plans that have warnings.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for plans that use parallelism and their cost.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for plans that use parallelism and their cost.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for plans that use parallelism, and worker time greater then elapsed time - more detail.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for plans that use parallelism, and worker time greater then elapsed time - more detail.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for plans that use parallelism, and worker time greater then elapsed time.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for plans that use parallelism, and worker time greater then elapsed time.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for plans that use parallelism, with more details.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for plans that use parallelism, with more details.sql</FullPath>
         </FileNode>
         <FileNode Name="Querying the plan cache for specific implicit conversions.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Querying the plan cache for specific implicit conversions.sql</FullPath>
         </FileNode>
         <FileNode Name="Swiss Army Knife - Fix VLFs.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Swiss Army Knife - Fix VLFs.sql</FullPath>
         </FileNode>
         <FileNode Name="Swiss Army Knife - IndexInformation_CurrentDB.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Swiss Army Knife - IndexInformation_CurrentDB.sql</FullPath>
         </FileNode>
         <FileNode Name="Swiss Army Knife - Latches.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Swiss Army Knife - Latches.sql</FullPath>
         </FileNode>
         <FileNode Name="Swiss Army Knife - Running_Blocked_processes.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Swiss Army Knife - Running_Blocked_processes.sql</FullPath>
         </FileNode>
         <FileNode Name="Swiss Army Knife - Waits.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Swiss Army Knife - Waits.sql</FullPath>
         </FileNode>

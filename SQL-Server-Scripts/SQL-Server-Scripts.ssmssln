@@ -7,14 +7,20 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Swiss Army Knife", "Swiss A
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Unsorted", "Unsorted\Unsorted.ssmssqlproj", "{908F71BC-1EDF-475D-A410-E7458E7B8820}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Brent Ozar", "Brent Ozar\Brent Ozar.ssmssqlproj", "{69430DAF-2D89-4E28-9F71-0C6BF0AB2A89}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Glenn Berry", "Glenn Berry\Glenn Berry.ssmssqlproj", "{60530A52-DF43-42BC-B2EB-35EEE8AB2FB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CAFDD203-E0DC-4540-8448-6051AAD27CF2}.Default|Default.ActiveCfg = Default
 		{331529BA-A985-4B32-860E-615EA671C185}.Default|Default.ActiveCfg = Default
 		{908F71BC-1EDF-475D-A410-E7458E7B8820}.Default|Default.ActiveCfg = Default
+		{D7E024E9-DDBD-45CD-A035-E79CD3FFD5EC}.Default|Default.ActiveCfg = Default
+		{69430DAF-2D89-4E28-9F71-0C6BF0AB2A89}.Default|Default.ActiveCfg = Default
+		{60530A52-DF43-42BC-B2EB-35EEE8AB2FB1}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

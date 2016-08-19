@@ -34,5 +34,6 @@ SELECT c2.value('@StatementText', 'VARCHAR(4000)') AS sql_text,
 FROM Convertsearch ss
 CROSS APPLY query_plan.nodes('//StmtSimple') AS q2(c2)
 CROSS APPLY c2.nodes('.//ScalarOperator[contains(@ScalarString, "CONVERT_IMPLICIT")]') AS q3(c3)
+order by usecounts desc
 OPTION(RECOMPILE, MAXDOP 1); 
 GO

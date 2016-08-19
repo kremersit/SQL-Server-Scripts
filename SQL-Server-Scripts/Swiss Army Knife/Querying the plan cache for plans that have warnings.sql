@@ -66,5 +66,6 @@ CROSS APPLY StmtSimple.nodes('//QueryPlan') AS q1(c1)
 CROSS APPLY c1.nodes('./Warnings') AS q2(c2)
 CROSS APPLY c1.nodes('./RelOp') AS q3(c3)
 OUTER APPLY c2.nodes('./PlanAffectingConvert') AS q4(c4)
+order by usecounts desc
 OPTION(RECOMPILE, MAXDOP 1); 
 GO

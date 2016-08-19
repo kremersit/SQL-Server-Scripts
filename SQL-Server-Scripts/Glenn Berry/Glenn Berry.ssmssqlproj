@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Unsorted">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Glenn Berry">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="N0RIPSNI:N0RIPSNI\Administrator">
-          <Created>2016-08-18T15:29:32.854817+02:00</Created>
+          <Created>2016-08-19T10:46:13.6712336+02:00</Created>
           <Type>SQL</Type>
           <Server>N0RIPSNI</Server>
           <UserName />
@@ -19,59 +19,41 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="Auto File Growth.sql">
+        <FileNode Name="SQL Server 2005 Diagnostic Information Queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Auto File Growth.sql</FullPath>
+          <FullPath>SQL Server 2005 Diagnostic Information Queries.sql</FullPath>
         </FileNode>
-        <FileNode Name="Index Fragmentation.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>Index Fragmentation.sql</FullPath>
-        </FileNode>
-        <FileNode Name="IO Statistics.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>IO Statistics.sql</FullPath>
-        </FileNode>
-        <FileNode Name="Page Splits (from dblog).sql">
+        <FileNode Name="SQL Server 2008 Diagnostic Information Queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Page Splits (from dblog).sql</FullPath>
+          <FullPath>SQL Server 2008 Diagnostic Information Queries.sql</FullPath>
         </FileNode>
-        <FileNode Name="Pending IO.sql">
+        <FileNode Name="SQL Server 2008 R2 Diagnostic Information Queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Pending IO.sql</FullPath>
+          <FullPath>SQL Server 2008 R2 Diagnostic Information Queries.sql</FullPath>
         </FileNode>
-        <FileNode Name="Running_Blocked_processes (swiss army knife).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>Running_Blocked_processes (swiss army knife).sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLSkills Wait Statistics.sql">
+        <FileNode Name="SQL Server 2012 Diagnostic Information Queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLSkills Wait Statistics.sql</FullPath>
+          <FullPath>SQL Server 2012 Diagnostic Information Queries.sql</FullPath>
         </FileNode>
-        <FileNode Name="Tables and Compression.sql">
+        <FileNode Name="SQL Server 2014 Diagnostic Information Queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Tables and Compression.sql</FullPath>
+          <FullPath>SQL Server 2014 Diagnostic Information Queries.sql</FullPath>
         </FileNode>
-        <FileNode Name="Wait Stats in 10 Seconds.sql">
+        <FileNode Name="SQL Server 2016 Diagnostic Information Queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Wait Stats in 10 Seconds.sql</FullPath>
+          <FullPath>SQL Server 2016 Diagnostic Information Queries.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
