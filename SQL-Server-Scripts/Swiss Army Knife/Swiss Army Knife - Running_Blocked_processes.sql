@@ -334,7 +334,7 @@ SELECT @sqlmajorver = CONVERT(int, (@@microsoftversion / 0x1000000) & 0xff);
 
 IF @sqlmajorver >= 11
 BEGIN
-	SET @sqlcmd = N'SELECT CASE WHEN ps.database_id = 32767 THEN ''ResourceDB'' ELSE DB_NAME(ps.database_id) END AS DatabaseName, 
+	SET @sqlcmd = N'SELECT  CASE WHEN ps.database_id = 32767 THEN ''ResourceDB'' ELSE DB_NAME(ps.database_id) END AS DatabaseName, 
 	CASE WHEN ps.database_id = 32767 THEN NULL ELSE OBJECT_NAME(ps.[object_id], ps.database_id) END AS ObjectName,
 	type_desc,
 	(SELECT qt.text AS [text()] 
@@ -357,7 +357,10 @@ BEGIN
 	ps.total_logical_writes/ps.execution_count AS avg_logical_writes,
 	ps.last_logical_writes, ps.min_logical_writes, ps.max_logical_writes
  FROM sys.dm_exec_procedure_stats AS ps
- CROSS APPLY sys.dm_exec_query_plan(ps.plan_handle) AS qp'
+ CROSS APPLY sys.dm_exec_query_plan(ps.plan_handle) AS qp
+ order by ps.execution_count desc
+ 
+ '
 	EXEC (@sqlcmd);
  END
  

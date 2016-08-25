@@ -11,6 +11,8 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Brent Ozar", "Brent Ozar\Br
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Glenn Berry", "Glenn Berry\Glenn Berry.ssmssqlproj", "{60530A52-DF43-42BC-B2EB-35EEE8AB2FB1}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Wait Stats Analyses", "Wait Stats Analyses\Wait Stats Analyses.ssmssqlproj", "{36D997EE-11C2-452B-80B2-6BD1C0AF7B1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
@@ -18,9 +20,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{331529BA-A985-4B32-860E-615EA671C185}.Default|Default.ActiveCfg = Default
 		{908F71BC-1EDF-475D-A410-E7458E7B8820}.Default|Default.ActiveCfg = Default
-		{D7E024E9-DDBD-45CD-A035-E79CD3FFD5EC}.Default|Default.ActiveCfg = Default
 		{69430DAF-2D89-4E28-9F71-0C6BF0AB2A89}.Default|Default.ActiveCfg = Default
 		{60530A52-DF43-42BC-B2EB-35EEE8AB2FB1}.Default|Default.ActiveCfg = Default
+		{D7C907EB-DFCA-4D18-9325-C7BDDD246879}.Default|Default.ActiveCfg = Default
+		{36D997EE-11C2-452B-80B2-6BD1C0AF7B1F}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
