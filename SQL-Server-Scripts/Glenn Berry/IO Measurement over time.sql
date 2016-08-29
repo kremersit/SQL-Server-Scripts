@@ -48,5 +48,5 @@ select  f.[database name]
 FROM    Aggregate_IO_Statistics A
         inner join #first f
           on  f.[database name] = a.[database name]
-ORDER BY 2 desc OPTION (RECOMPILE);
+ORDER BY [Total I/O (MB)] desc OPTION (RECOMPILE);
 ------

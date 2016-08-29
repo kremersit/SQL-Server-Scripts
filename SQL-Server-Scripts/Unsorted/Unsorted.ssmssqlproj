@@ -79,6 +79,12 @@
           <AssociatedConnUserName />
           <FullPath>Wait Stats in 10 Seconds.sql</FullPath>
         </FileNode>
+        <FileNode Name="Waiting tasks with queries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Waiting tasks with queries.sql</FullPath>
+        </FileNode>
         <FileNode Name="Worst Queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
