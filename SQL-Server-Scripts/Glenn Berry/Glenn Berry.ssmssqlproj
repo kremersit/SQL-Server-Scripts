@@ -19,6 +19,18 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="CPU Measurement over time.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CPU Measurement over time.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IO Measurement over time.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>IO Measurement over time.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQL Server 2005 Diagnostic Information Queries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>

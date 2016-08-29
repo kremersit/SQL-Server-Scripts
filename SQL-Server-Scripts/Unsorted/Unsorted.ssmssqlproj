@@ -26,14 +26,14 @@
           <FullPath>Auto File Growth.sql</FullPath>
         </FileNode>
         <FileNode Name="Index Fragmentation.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Index Fragmentation.sql</FullPath>
         </FileNode>
         <FileNode Name="IO Statistics.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>IO Statistics.sql</FullPath>
         </FileNode>
@@ -55,6 +55,12 @@
           <AssociatedConnUserName />
           <FullPath>Running_Blocked_processes (swiss army knife).sql</FullPath>
         </FileNode>
+        <FileNode Name="SHOWPLAN_ALL_likeQuery_for_a_CachedQueryPlan.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SHOWPLAN_ALL_likeQuery_for_a_CachedQueryPlan.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLSkills Wait Statistics.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
@@ -72,6 +78,12 @@
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Wait Stats in 10 Seconds.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Worst Queries.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Worst Queries.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
