@@ -1,4 +1,4 @@
-use nocount on;
+set nocount on;
 
 use tempdb
 go
