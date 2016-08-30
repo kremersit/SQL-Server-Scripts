@@ -25,6 +25,12 @@
           <AssociatedConnUserName />
           <FullPath>Auto File Growth.sql</FullPath>
         </FileNode>
+        <FileNode Name="Database Compression.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Database Compression.sql</FullPath>
+        </FileNode>
         <FileNode Name="Index Fragmentation.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
@@ -72,6 +78,12 @@
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Tables and Compression.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Wait Stats from Extended Events.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Wait Stats from Extended Events.sql</FullPath>
         </FileNode>
         <FileNode Name="Wait Stats in 10 Seconds.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
