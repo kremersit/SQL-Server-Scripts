@@ -1,9 +1,12 @@
 use tempdb
 go
-/*
-drop table tempdb..#waits1
-drop table tempdb..#waits2
-*/
+
+if object_id('tempdb..#waits1') is not null
+begin
+  drop table tempdb..#waits1
+  drop table tempdb..#waits2
+end
+
 if object_id('tempdb..#waits1') is null
 begin
 	select *, getdate() as insert_date into #waits1  from sys.dm_os_wait_stats
@@ -21,4 +24,4 @@ from	  #waits1 w1
 		    left join #waits2 w2
 			    on  w1.wait_type = w2.wait_type
 where   w1.wait_type not like '%HADR%'
-order by 2 desc
+order by 3 desc

@@ -1,8 +1,9 @@
+;with compression_on_tables as (
 select	case 
           when data_compression = 0 and i.type = 0 then 
-            'USE [DBA];BEGIN TRY ALTER TABLE [' + s.name + '].[' + t.name + '] REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE, ONLINE = ON) END TRY BEGIN CATCH PRINT error_message() END CATCH '
+            '/*' + cast((a.total_pages * 8 / 1024.00 / 1024) as char(20)) + '*/ USE [' + db_name(db_id()) + '];BEGIN TRY ALTER TABLE [' + s.name + '].[' + t.name + '] REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE, ONLINE = ON) END TRY BEGIN CATCH PRINT error_message() END CATCH '
           when data_compression = 0 and i.type > 0 then 
-            'USE [DBA];BEGIN TRY ALTER INDEX [' + i.name + '] on [' + s.name + '].[' + t.name + '] REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE, ONLINE = ON) END TRY BEGIN CATCH PRINT error_message() END CATCH '
+            '/*' + cast((a.total_pages * 8 / 1024.00 / 1024) as char(20)) + '*/ USE [' + db_name(db_id()) + '];BEGIN TRY ALTER INDEX [' + i.name + '] on [' + s.name + '].[' + t.name + '] REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE, ONLINE = ON) END TRY BEGIN CATCH PRINT error_message() END CATCH '
           else ''
         end as sql_statement
       , s.name as schema_name
@@ -24,5 +25,8 @@ from    sys.partitions p with (nolock)
           on  a.container_id = p.partition_id 
         left join sys.indexes i with (nolock)
           on  i.object_id = t.object_id
-order by total_gb desc 
-option (recompile);
+)
+select  *
+from    compression_on_tables
+where   sql_statement <> ''
+order by index_name, table_name desc 

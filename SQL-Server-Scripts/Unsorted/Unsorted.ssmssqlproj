@@ -25,6 +25,24 @@
           <AssociatedConnUserName />
           <FullPath>Auto File Growth.sql</FullPath>
         </FileNode>
+        <FileNode Name="CPU Usage on Windows.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CPU Usage on Windows.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CPU Usage per database.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CPU Usage per database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Database Compression - Instance level.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Database Compression - Instance level.sql</FullPath>
+        </FileNode>
         <FileNode Name="Database Compression.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
@@ -56,8 +74,8 @@
           <FullPath>Pending IO.sql</FullPath>
         </FileNode>
         <FileNode Name="Running_Blocked_processes (swiss army knife).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Running_Blocked_processes (swiss army knife).sql</FullPath>
         </FileNode>
