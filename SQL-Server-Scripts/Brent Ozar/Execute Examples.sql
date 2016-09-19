@@ -1,8 +1,36 @@
 use master
 go
-declare @sp_BlitzCache bit = 0
+declare @sp_Blitz bit = 1
+      , @sp_BlitzCache bit = 0
       , @sp_BlitzFirst bit = 0
-      , @sp_BlitzTrace bit = 1
+      , @sp_BlitzTrace bit = 0
+if @sp_Blitz = 1
+exec [dbo].[sp_Blitz]
+        @Help = 0 ,
+        @CheckUserDatabaseObjects = 1 ,
+        @CheckProcedureCache = 0 ,
+        @OutputType = 'TABLE' ,
+        @OutputProcedureCache = 0 ,
+        @CheckProcedureCacheFilter = NULL ,
+        @CheckServerInfo = 0 ,
+        @SkipChecksServer = NULL ,
+        @SkipChecksDatabase = NULL ,
+        @SkipChecksSchema = NULL ,
+        @SkipChecksTable = NULL ,
+        @IgnorePrioritiesBelow = NULL ,
+        @IgnorePrioritiesAbove = NULL ,
+        @OutputServerName = NULL ,
+        @OutputDatabaseName = NULL ,
+        @OutputSchemaName = NULL ,
+        @OutputTableName = NULL ,
+        @OutputXMLasNVARCHAR = 0 ,
+        @EmailRecipients = NULL ,
+        @EmailProfile = NULL ,
+        @SummaryMode = 0 ,
+        @BringThePain = 0 ,
+        @VersionDate = NULL
+
+
 /*dbo.sp_BlitzCache */ 
 if @sp_BlitzCache = 1
 exec dbo.sp_BlitzCache

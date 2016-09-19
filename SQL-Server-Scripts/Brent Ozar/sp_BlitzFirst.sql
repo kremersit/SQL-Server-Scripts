@@ -2980,3 +2980,6 @@ EXEC sp_BlitzFirst @Seconds = 60
 , @OutputTableNamePerfmonStats = 'BlitzFirstResults_PerfmonStats'
 , @OutputTableNameWaitStats = 'BlitzFirstResults_WaitStats'
 */
+
+--With extra diagnostic info:
+EXEC dbo.sp_BlitzFirst @ExpertMode = 1;

@@ -1048,7 +1048,7 @@ ORDER BY qs.total_logical_reads DESC OPTION (RECOMPILE);
 -- Database specific queries *****************************************************************
 
 -- **** Please switch to a user database that you are interested in! *****
-USE YourDatabaseName; -- make sure to change to an actual database on your instance, not the master system database
+USE plixaSearch; -- make sure to change to an actual database on your instance, not the master system database
 GO
 
 -- Individual File Sizes and space available for current database  (Query 47) (File Sizes and Space)
@@ -1377,7 +1377,8 @@ SELECT OBJECT_NAME(t.[object_id]) AS [ObjectName], p.[rows] AS [Table Rows], p.i
        p.data_compression_desc AS [Index Data Compression],
        t.create_date, t.lock_on_bulk_load, t.is_replicated, t.has_replication_filter, 
        t.is_tracked_by_cdc, t.lock_escalation_desc, t.is_memory_optimized, t.durability_desc, t.is_filetable,
-	   t.temporal_type_desc, t.is_remote_data_archive_enabled, t.remote_data_archive_migration_state_desc, t.is_external -- new for SQL Server 2016
+	   t.temporal_type_desc, t.is_remote_data_archive_enabled, t.is_external -- new for SQL Server 2016
+-- t.remote_data_archive_migration_state_desc,
 FROM sys.tables AS t WITH (NOLOCK)
 INNER JOIN sys.partitions AS p WITH (NOLOCK)
 ON t.[object_id] = p.[object_id]
