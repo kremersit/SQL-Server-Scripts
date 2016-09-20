@@ -73,6 +73,12 @@
           <AssociatedConnUserName />
           <FullPath>Pending IO.sql</FullPath>
         </FileNode>
+        <FileNode Name="Percentage Complete inc ETA.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Percentage Complete inc ETA.sql</FullPath>
+        </FileNode>
         <FileNode Name="Running_Blocked_processes (swiss army knife).sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
