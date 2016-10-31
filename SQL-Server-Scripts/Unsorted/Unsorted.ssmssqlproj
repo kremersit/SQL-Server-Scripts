@@ -3,7 +3,7 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="N0RIPSNI:N0RIPSNI\Administrator">
+        <ConnectionNode Name="N0RIPSNI:WIN2016-DEV\noripsni">
           <Created>2016-08-18T15:29:32.854817+02:00</Created>
           <Type>SQL</Type>
           <Server>N0RIPSNI</Server>
