@@ -2,44 +2,31 @@
 <SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Brent Ozar">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
-      <Items>
-        <ConnectionNode Name="N0RIPSNI:N0RIPSNI\Administrator">
-          <Created>2016-08-25T09:53:43.880068+02:00</Created>
-          <Type>SQL</Type>
-          <Server>N0RIPSNI</Server>
-          <UserName />
-          <Authentication>Windows Authentication</Authentication>
-          <InitialDB>master</InitialDB>
-          <LoginTimeout>15</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
-        </ConnectionNode>
-      </Items>
+      <Items />
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="Execute Examples.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>Execute Examples.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_Blitz.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>sp_Blitz.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_BlitzCache.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>sp_BlitzCache.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_BlitzFirst.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:N0RIPSNI:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>N0RIPSNI</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>sp_BlitzFirst.sql</FullPath>
         </FileNode>
