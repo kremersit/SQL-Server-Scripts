@@ -2,7 +2,8 @@ set nocount on;
 /*-------------------------------------------------------------------------------------------------------------
 --
 --   Get VLF Information 
---   Mark Kremers - 21-07-2017
+--   version 1 - Mark Kremers - 21-07-2017 : Initial commit
+--   version 2 - Mark Kremers - 21-07-2017 : Added aggregated results and detailed information
 --
 --   Description: A high number of VLF's (Virtual Log Files) can have an impact on performance
 --   For information on how to set the file growth of the Transaction Log see:
@@ -123,10 +124,22 @@ begin
   set @currow = @currow + 1;
 end
 ---------------------------------------------------------------------------------------------------------------
--- Output result
+-- Output Totals
+---------------------------------------------------------------------------------------------------------------
+select  DatabaseName
+      , count(DatabaseName) as Number_of_VLF
+from   (select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
+        from    @dbcc_loginfo_pre
+        union all
+        select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
+        from    @dbcc_loginfo_post) d
+group by DatabaseName
+---------------------------------------------------------------------------------------------------------------
+-- Output detailed result
 ---------------------------------------------------------------------------------------------------------------
 select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
 from    @dbcc_loginfo_pre
 union all
 select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
 from    @dbcc_loginfo_post
+
