@@ -1,9 +1,11 @@
+use master;
 set nocount on;
 /*-------------------------------------------------------------------------------------------------------------
 --
 --   Get VLF Information 
 --   version 1 - Mark Kremers - 21-07-2017 : Initial commit
 --   version 2 - Mark Kremers - 21-07-2017 : Added aggregated results and detailed information
+--   version 3 - Mark Kremers - 24-07-2017 : Added filesize information and autogrowth settings
 --
 --   Description: A high number of VLF's (Virtual Log Files) can have an impact on performance
 --   For information on how to set the file growth of the Transaction Log see:
@@ -47,6 +49,13 @@ declare @databases table (
   Id int identity(1, 1)
 , DatabaseName sysname
 );
+
+declare @database_filesizes table (
+	FileId tinyint
+, FileSizeInMb numeric(25, 2)
+, DatabaseName sysname null
+, GrowthSizeInMb numeric(25, 2)
+);
 ---------------------------------------------------------------------------------------------------------------
 -- Get server version
 ---------------------------------------------------------------------------------------------------------------
@@ -79,13 +88,13 @@ begin
   select  @database_name = DatabaseName
   from    @databases
   where   Id = @currow
-  -------------------------------------------------------------------------------------------------------------
-  -- Create SQL Statement for VLF information
-  -------------------------------------------------------------------------------------------------------------
-  set @nsql = 'use [[database_name]]; dbcc loginfo() with no_infomsgs'
-  set @nsql = replace(@nsql, '[database_name]', @database_name)
   
   begin try
+    -----------------------------------------------------------------------------------------------------------
+    -- Create SQL Statement for VLF information
+    -----------------------------------------------------------------------------------------------------------
+    set @nsql = 'use [[database_name]]; dbcc loginfo() with no_infomsgs'
+    set @nsql = replace(@nsql, '[database_name]', @database_name)
     -----------------------------------------------------------------------------------------------------------
     -- Process SQL Statement for SQL Server 2000, SQL Server 2005, SQL Server 2008 and SQL Server 2008 R2
     -----------------------------------------------------------------------------------------------------------
@@ -112,7 +121,31 @@ begin
       set     DatabaseName = @database_name
       where   DatabaseName is null
     end
+    -----------------------------------------------------------------------------------------------------------
+    -- Process SQL Statement for SQL Server 2012, SQL Server 2014 and SQL Server 2016
+    -----------------------------------------------------------------------------------------------------------
+    if @server_version in ('SQL2008', 'SQL2012', 'SQL2014', 'SQL2016')
+    begin
+      ---------------------------------------------------------------------------------------------------------
+      -- Create SQL Statement for database file sizes
+      ---------------------------------------------------------------------------------------------------------
+      set @nsql = '
+      use [[database_name]]; 
+      select  file_id
+            , (((size * 8192.0) / 1024) / 1024)
+            , ''[database_name]'' 
+            , case
+                when is_percent_growth = 0 then (((growth * 8192.0) / 1024) / 1024)
+                when is_percent_growth = 1 then ((((size * (growth / 100)) * 8192.0) / 1024) / 1024)
+              end as growth_size_in_mb
+      from    [[database_name]].sys.database_files 
+      where   type = 1'
+      set @nsql = replace(@nsql, '[database_name]', @database_name)
 
+      insert
+      into    @database_filesizes
+      exec sp_executesql @nsql
+    end
   end try
   begin catch
     print 'Error' 
@@ -126,20 +159,37 @@ end
 ---------------------------------------------------------------------------------------------------------------
 -- Output Totals
 ---------------------------------------------------------------------------------------------------------------
-select  DatabaseName
-      , count(DatabaseName) as Number_of_VLF
+select  d.DatabaseName
+      , count(d.DatabaseName) as Number_of_VLF
+      , f.FileSizeInMb
+      , f.GrowthSizeInMb
 from   (select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
         from    @dbcc_loginfo_pre
         union all
         select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
         from    @dbcc_loginfo_post) d
-group by DatabaseName
+        inner join @database_filesizes f
+          on  f.DatabaseName = d.DatabaseName
+group by  d.DatabaseName
+        , f.FileSizeInMb
+        , f.GrowthSizeInMb
+order by 2 desc
 ---------------------------------------------------------------------------------------------------------------
 -- Output detailed result
 ---------------------------------------------------------------------------------------------------------------
-select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
-from    @dbcc_loginfo_pre
-union all
-select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
-from    @dbcc_loginfo_post
-
+select  d.FileId
+      , d.FileSize
+      , d.StartOffset
+      , d.FSeqNo
+      , d.Status
+      , d.Parity
+      , d.CreateLSN
+      , d.DatabaseName
+      , f.FileSizeInMb
+from   (select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
+        from    @dbcc_loginfo_pre
+        union all
+        select  FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN, DatabaseName
+        from    @dbcc_loginfo_post) d
+        inner join @database_filesizes f
+          on  f.DatabaseName = d.DatabaseName
