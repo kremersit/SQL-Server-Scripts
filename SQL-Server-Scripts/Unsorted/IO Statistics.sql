@@ -1,15 +1,50 @@
-select	d.file_id
-      , d.physical_name
-      , num_of_reads
-      , io_stall_read_ms
-      , io_stall_read_ms / (num_of_reads * 1.0) as avg_io_stall_read_ms 
-      , (num_of_bytes_read / (num_of_reads * 1.0) / 1024) / 1024 as avg_num_of_Mbytes_read 
+use master
+go
+set nocount on;
 
-      , num_of_writes
-      , io_stall_write_ms
-      , io_stall_write_ms / (num_of_writes * 1.0) as avg_io_stall_write_ms 
-      , (num_of_bytes_written / (num_of_writes * 1.0) / 1024) / 1024 as avg_num_of_Mbytes_written 
+if object_id('tempdb..#dm_io_virtual_file_stats') is not null
+begin
+  drop table #dm_io_virtual_file_stats
+end
+go
 
-from	sys.dm_io_virtual_file_stats(db_id(), null) f
-      inner join sys.database_files d
-        on  d.file_id = f.file_id
+select  top 0
+        db_name() as database_name 
+      , type_desc
+      , sum(num_of_reads) as num_of_reads
+      , sum(io_stall_read_ms) as io_stall_read_ms
+      , sum(num_of_writes) as num_of_writes
+      , sum(io_stall_write_ms) as io_stall_write_ms
+      , cast((sum(num_of_reads) / (sum(num_of_reads) + sum(num_of_writes) * 1.0)) * 100 as money) as read_percentage
+      , cast((sum(num_of_writes) / (sum(num_of_reads) + sum(num_of_writes) * 1.0)) * 100 as money) as write_percentage 
+into    #dm_io_virtual_file_stats
+from    sys.dm_io_virtual_file_stats(db_id(), null) f
+        inner join sys.database_files d  
+          on d.file_id = f.file_id  
+group by d.type_desc
+
+insert
+into    #dm_io_virtual_file_stats
+exec sp_msforeachdb N'
+use [?];
+
+select  ''?'' as database_name 
+      , type_desc
+      , sum(num_of_reads) as num_of_reads
+      , sum(io_stall_read_ms) as io_stall_read_ms
+      , sum(num_of_writes) as num_of_writes
+      , sum(io_stall_write_ms) as io_stall_write_ms
+      , cast((sum(num_of_reads) / (sum(num_of_reads) + sum(num_of_writes) * 1.0)) * 100 as money) as read_percentage
+      , cast((sum(num_of_writes) / (sum(num_of_reads) + sum(num_of_writes) * 1.0)) * 100 as money) as write_percentage 
+       
+from    [?].sys.dm_io_virtual_file_stats(db_id(), null) f  
+        inner join [?].sys.database_files d  
+          on d.file_id = f.file_id  
+group by d.type_desc
+'
+
+
+
+select  *
+from    #dm_io_virtual_file_stats
+order by database_name
