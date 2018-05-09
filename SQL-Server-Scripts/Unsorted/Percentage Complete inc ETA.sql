@@ -13,11 +13,17 @@ from    sys.dm_exec_requests d
         cross apply sys.dm_exec_sql_text(d.sql_handle) t
 where   d.percent_complete > 0 
 ),  calculated_dm_exec_requests as (
-select  *
+select  percent_complete 
       , percent_complete / elapsed_time_seconds as percent_per_second
       , (100 / (percent_complete / elapsed_time_seconds)) as total_running_time
+	  , start_time
+	  , current_date_time
+	  , elapsed_time_seconds
+	  , session_id
+	  , sql_text
 from    dm_exec_requests
 )
-select  *
-      , dateadd(SECOND, total_running_time, start_time) as ETA
+select  dateadd(SECOND, total_running_time, start_time) as ETA
+	  , *
 from    calculated_dm_exec_requests
+
