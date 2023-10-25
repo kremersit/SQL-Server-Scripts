@@ -122,6 +122,7 @@ select  @server_version = case
                            when cast(SERVERPROPERTY ('productversion') as varchar) like '12%'   THEN 'SQL2014'
                            when cast(SERVERPROPERTY ('productversion') as varchar) like '13%'   THEN 'SQL2016'     
                            when cast(SERVERPROPERTY ('productversion') as varchar) like '14%'   THEN 'SQL2017'     
+                           when cast(SERVERPROPERTY ('productversion') as varchar) like '15%'   THEN 'SQL2019'     
                           end 
 ---------------------------------------------------------------------------------------------------------------
 -- Get Autogrowth settings (if available)
@@ -182,9 +183,10 @@ begin
       where   DatabaseName is null
     end
     -----------------------------------------------------------------------------------------------------------
-    -- Process SQL Statement for SQL Server 2012, SQL Server 2014, SQL Server 2016 and SQL Server 2017
+    -- Process SQL Statement for SQL Server 2012, SQL Server 2014,
+    -- SQL Server 2016, SQL Server 2017 and SQL Server 2019
     -----------------------------------------------------------------------------------------------------------
-    if @server_version in ('SQL2012', 'SQL2014', 'SQL2016', 'SQL2017')
+    if @server_version in ('SQL2012', 'SQL2014', 'SQL2016', 'SQL2017', 'SQL2019')
     begin
       insert
       into    @dbcc_loginfo_post_SQL2012 (ReoveryUnitId, FileId, FileSize, StartOffset, FSeqNo, Status, Parity, CreateLSN)
@@ -195,9 +197,10 @@ begin
       where   DatabaseName is null
     end
     -----------------------------------------------------------------------------------------------------------
-    -- Process SQL Statement for SQL Server 2012, SQL Server 2014, SQL Server 2016 and SQL Server 2017
+    -- Process SQL Statement for SQL Server 2012, SQL Server 2014,
+    -- SQL Server 2016, SQL Server 2017 and SQL Server 2019
     -----------------------------------------------------------------------------------------------------------
-    if @server_version in ('SQL2008', 'SQL2012', 'SQL2014', 'SQL2016', 'SQL2017')
+    if @server_version in ('SQL2008', 'SQL2012', 'SQL2014', 'SQL2016', 'SQL2017', 'SQL2019')
     begin
       ---------------------------------------------------------------------------------------------------------
       -- Create SQL Statement for database file sizes
